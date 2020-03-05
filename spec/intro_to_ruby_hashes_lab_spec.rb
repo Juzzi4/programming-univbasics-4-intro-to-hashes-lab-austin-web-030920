@@ -33,28 +33,28 @@ describe "working with hashes" do
       end
     end
 
-    describe "my_hash_creator" do
-      it "accepts a key and a value as parameters and returns a hash with this key/value pair inside" do
-        expect(my_hash_creator(:name, 'Grace Hopper')).to be_a(Hash)
-        expect(my_hash_creator(:name, 'Grace Hopper')).to eq({name: 'Grace Hopper'})
+   # describe "my_hash_creator" do
+      #it "accepts a key and a value as parameters and returns a hash with this key/value pair inside" do
+        #expect(my_hash_creator(:name, 'Grace Hopper')).to be_a(Hash)
+        #expect(my_hash_creator(:name, 'Grace Hopper')).to eq({name: 'Grace Hopper'})
 
-        expect(my_hash_creator(1, 2)).to eq({1 => 2})
-      end
-    end
-  end
-end
+        #expect(my_hash_creator(1, 2)).to eq({1 => 2})
+      #end
+    #end
+  #end
+#end
 
-describe "reading data from a hash" do
-  describe "read_from_hash" do
-    it "returns the value corresponding to the provided key" do
-      expect(read_from_hash({name: 'Steve'}, :name)).to eq('Steve')
-      expect(read_from_hash({'name' => 'Tzvi'}, 'name')).to eq('Tzvi')
-    end
+#describe "reading data from a hash" do
+  #describe "read_from_hash" do
+    #it "returns the value corresponding to the provided key" do
+      #expect(read_from_hash({name: 'Steve'}, :name)).to eq('Steve')
+      #expect(read_from_hash({'name' => 'Tzvi'}, 'name')).to eq('Tzvi')
+   # end
 
-    it "returns nil if the key is not found in the provided hash" do
+    #it "returns nil if the key is not found in the provided hash" do
       expect(read_from_hash({age: 31}, :name)).to eq(nil)
-    end
-  end
+    #end
+ # end
 end
 
 describe "updating data in a hash" do
